@@ -22,11 +22,7 @@ public class Main {
         bob.parler("Barman ! une verre ! ");
         michel.servir(bob);
         clint.tirer(clint,bob);
-
-
-
-        ((Sherif) clint).cofrer();
-        bob.emprisonner(clint);
+        ((Sherif) clint).cofrer(bob);
         clint.liberer();
        fleur.seFaireLiberer();
     }
