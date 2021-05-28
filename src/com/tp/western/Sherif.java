@@ -21,7 +21,8 @@ public class Sherif extends Cowboy{
         System.out.println( "("+getNom()+") - "+text);
     }
 
-    public void cofrer () {
+    public void cofrer (Brigand brigand) {
         System.out.println("("+getNom()+") - "+"Au nom de la loi, je vous arrête !!");
+        brigand.emprisonner(this);
     }
 }
