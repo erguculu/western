@@ -1,23 +1,21 @@
-package com.tp.western;
+package com.tp.western.model;
 
-public class Humain {
+public class Humain implements VisagePale{
 
     private String nom;
     protected String boissonFavori;
-    String title;
 
     public Humain(String nom) {
         this.nom = nom;
-        this.boissonFavori = "de l'eau" ;
-        this.title = "Humain";
+        this.boissonFavori = "l'eau" ;
     }
 
     public void parler (String text){
-        System.out.println(this.nom +" "+text);
+        System.out.println(this.nom +" - "+text);
     }
 
     public void sePresenter() {
-        System.out.println("Bonjour je suis " +this.nom+ " et j'aime "+ this.boissonFavori);
+        this.parler("Bonjour je suis " +this.getNom()+ " et j'aime "+ this.getBoissonFavori());
     }
 
     public void boire (){
@@ -29,5 +27,10 @@ public class Humain {
     }
     public String getBoissonFavori(){
         return boissonFavori;
+    }
+
+    @Override
+    public void seFareScalper() {
+        this.parler("Aïe ma te^te !.");
     }
 }

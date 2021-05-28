@@ -1,7 +1,7 @@
-package com.tp.western;
+package com.tp.western.model;
 
 public class Sherif extends Cowboy{
-    String title;
+   private String title;
     public Sherif(String nom) {
         super(nom);
         this.title = "Sherif";
@@ -9,20 +9,19 @@ public class Sherif extends Cowboy{
 
     @Override
     public void sePresenter(){
-        System.out.println("("+getNom()+") - "+"Bonjour je suis "+title+ " "+getNom()+ " et j'aime "+ getBoissonFavori());
+        this.parler("Bonjour je suis "+title+ " "+getNom()+ " et j'aime "+ getBoissonFavori());
     }
 
     public void annonce(){
         System.out.println("("+getNom()+") - "+"OYEZ OYEZ BRAVE GENS !! 5000 $ à qui arretera Shekay le mechant mort ou vif !!");
     }
 
-    @Override
-    public void parler (String text){
+    public void demander (String text){
         System.out.println( "("+getNom()+") - "+text);
     }
 
     public void cofrer (Brigand brigand) {
-        System.out.println("("+getNom()+") - "+"Au nom de la loi, je vous arrête !!");
+        this.parler("Au nom de la loi, je  t'arrête !!");
         brigand.emprisonner(this);
     }
 }

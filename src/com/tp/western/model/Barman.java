@@ -1,16 +1,16 @@
-package com.tp.western;
+package com.tp.western.model;
 
-public class Barman extends Humain{
+public class Barman extends Humain {
     private String nomDeBar;
     public Barman(String nom) {
         super(nom);
-        this.boissonFavori = "Vin";
         this.nomDeBar = "Chez"+getNom();
+        this.boissonFavori = "Vin" ;
     }
 
     @Override
     public void sePresenter(){
-        System.out.println("("+getNom()+") - "+"Bienvenue Chez " +getNom()+ " Coco !");
+        this.parler("Bienvenue Chez " +getNom()+ " Coco !");
     }
 
     public void servir (Humain humain){
